@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 function Start() {
     return (
         <>
-        <p><h2>Hello and Welcome!</h2></p>
+        <h2>Hello and Welcome!</h2>
         <p>This application will help you learn and practice the steps to determining the key signature of every scale! To begin, please choose if you would like to learn the process, or test your knowledge.</p>
         <Button className="btn" ><Link to="/learn">Learn</Link></Button>
         <Button className="btn">Play</Button>

@@ -15,7 +15,7 @@ function App() {
    
       <Route exact path="/" component={Start} />
       <Route exact path="/learn" component={Learn} />
-      {/* <Route exact path="/learn" component={Learn} /> */}
+      {/* <Route exact path="/play" component={Play} /> */}
     </Router>
   );
 }
