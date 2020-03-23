@@ -63,7 +63,7 @@ function log() {
        
         
         
-        state.q1===false && state.q2===false? 
+        state.q1===false ? 
         <>
         <h3>This step by step guide will help you find the key signature to any scale by following a simple, step-by-step series of questions, with minimal need for memorization!</h3>
         <h2>Question 1</h2>
@@ -96,18 +96,18 @@ function log() {
         <button onClick={log}>current state</button>
         </>
         :
-        state.q1===true && state.q2===true && state.q3===true && state.flat===true?
+        state.q1===true && state.q2===true && state.q3===true && state.hasFlat===true?
         <>
-        <p>If the scale has the word "flat" in it's name, (and isn't C or F major), then we know it will have flats in it's key signature. Now we must determine which flats it has. To do so, we must first make sure we know the order of flats. Flats appear in a specific order, which is: B,E,A,D,G,C,F. It is suggested you memorize the order of sharps and flats. Here is a mnemonic device to help: Boromir Eats Arrows, Dies. Gollum Captures Frodo.</p>
+        <p>If the scale has the word "flat" in it's name, (and it isn't C or F major), then we know it will have flats in it's key signature. Now we must determine which flats it has. To do so, we must first make sure we know the order of flats. Flats appear in a specific order, which is: B,E,A,D,G,C,F. It is suggested you memorize the order of sharps and flats. Here is a mnemonic device to help: Boromir Eats Arrows, Dies. Gollum Captures Frodo.</p>
         <p>Once we know the order of flats, we simply go down the order until we find the scale name we are looking for (note for this that the order is referring to flats. This means that B = B flat, E = E flat, etc.). Once we arrived at the target note, we simply add one more flat (by order), and those flats are the key signature for that scale.</p>
         <h3>Example:</h3>
         <p>We are looking at the scale of Db major. Going down the order of flats until we match, we get B,E,A,D. Then, adding one more by order leads us to B,E,A,D,G, and those are the flats that are in the key signature of Db major (and it's parralel minor, Bb minor).</p>
         <button onClick={reset}><Link to="/">Got It!</Link></button>
         </>
         :
-        state.q1===true && state.q2===true && state.q3===true && state.flat===false?
+        state.q1===true && state.q2===true && state.q3===true && state.hasFlat===false?
         <>
-        <p>If the scale does not have the word "flat" in it's name, (and isn't C or F major), then we know it will have sharps in it's key signature. Now we must determine which sharps it has. To do so, we must first make sure we know the order of sharps. sharps appear in a specific order, which is: F, C, G, D, A, E, B. It is suggested you memorize the order of sharps and flats. Here is a mnemonic device to help: Frodo Can Go Down And Eat Breakfast.</p>
+        <p>If the scale does not have the word "flat" in it's name, (and it isn't C or F major), then we know it will have sharps in it's key signature. Now we must determine which sharps it has. To do so, we must first make sure we know the order of sharps. sharps appear in a specific order, which is: F, C, G, D, A, E, B. It is suggested you memorize the order of sharps and flats. Here is a mnemonic device to help: Frodo Can Go Down And Eat Breakfast.</p>
         <p>Once we know the order of sharps, we need to go a "minor second" interval below our scale name (a minor second is half a step, and one note name change). This will give us another note (so a minor second below G is F#, a minor second below C is B, etc.). Once we found this new name, we go down the order of sharps until we hit a match with this new name, and those are the sharps in the key signature for that scale.</p>
         <h3>Example:</h3>
         <p>We are looking at the scale of A major. Going down a minor second brings us to G#. We then go down the order of sharps until we hit a match, we get F, C, G, and those are the sharps that are in the key signature of A major (and it's parralel minor, F# minor).</p>
