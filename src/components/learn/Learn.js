@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import { Link } from "react-router-dom";
-import { Button } from "reactstrap";
+
 
 
 
@@ -101,7 +101,7 @@ function log() {
         <p>If the scale has the word "flat" in it's name, (and it isn't C or F major), then we know it will have flats in it's key signature. Now we must determine which flats it has. To do so, we must first make sure we know the order of flats. Flats appear in a specific order, which is: B,E,A,D,G,C,F. It is suggested you memorize the order of sharps and flats. Here is a mnemonic device to help: Boromir Eats Arrows, Dies. Gollum Captures Frodo.</p>
         <p>Once we know the order of flats, we simply go down the order until we find the scale name we are looking for (note for this that the order is referring to flats. This means that B = B flat, E = E flat, etc.). Once we arrived at the target note, we simply add one more flat (by order), and those flats are the key signature for that scale.</p>
         <h3>Example:</h3>
-        <p>We are looking at the scale of Db major. Going down the order of flats until we match, we get B,E,A,D. Then, adding one more by order leads us to B,E,A,D,G, and those are the flats that are in the key signature of Db major (and it's parralel minor, Bb minor).</p>
+        <p>We are looking at the scale of Db major. Going down the order of flats until we match, we get B,E,A,D. Then, adding one more by order leads us to B,E,A,D,G, and those are the flats that are in the key signature of Db major (and it's relative minor, Bb minor).</p>
         <button onClick={reset}><Link to="/">Got It!</Link></button>
         </>
         :
@@ -110,7 +110,7 @@ function log() {
         <p>If the scale does not have the word "flat" in it's name, (and it isn't C or F major), then we know it will have sharps in it's key signature. Now we must determine which sharps it has. To do so, we must first make sure we know the order of sharps. sharps appear in a specific order, which is: F, C, G, D, A, E, B. It is suggested you memorize the order of sharps and flats. Here is a mnemonic device to help: Frodo Can Go Down And Eat Breakfast.</p>
         <p>Once we know the order of sharps, we need to go a "minor second" interval below our scale name (a minor second is half a step, and one note name change). This will give us another note (so a minor second below G is F#, a minor second below C is B, etc.). Once we found this new name, we go down the order of sharps until we hit a match with this new name, and those are the sharps in the key signature for that scale.</p>
         <h3>Example:</h3>
-        <p>We are looking at the scale of A major. Going down a minor second brings us to G#. We then go down the order of sharps until we hit a match, we get F, C, G, and those are the sharps that are in the key signature of A major (and it's parralel minor, F# minor).</p>
+        <p>We are looking at the scale of A major. Going down a minor second brings us to G#. We then go down the order of sharps until we hit a match, we get F, C, G, and those are the sharps that are in the key signature of A major (and it's relative minor, F# minor).</p>
         <button onClick={reset}><Link to="/">Got It!</Link></button>
         </>
         :
@@ -118,9 +118,9 @@ function log() {
         <>
         <p>When searching for the key signature of a minor scale, first we must find the "relative major" of it. A minor scale shares the same key signature of its relative major. </p>
         <p>To find the relative major, we must move up a "minor third" interval from the original scale name. A minor third interval is defined as a change of 1.5 steps, and TWO note names. This means that first we must determine what will be the note name of the target scale. The note name order is: C, D, E, F, G, A, B, C. So, first we must find our original, minor scale note name (disregarding for the moment and "b" or "#" signs attached to it), and move up 2 names from it.</p>
-        <p>Next, we need to determine if the new note name (the one that is 2 above the original) has and "b" or "#" signs. To do that, we look at the 2nd part of finding a relative major: the 1.5 steps. Once we know the parallel major's name, we need to account for the distance: we go back to the original, minor scale name (this time including any "b" or "#"), and we go up 1.5 steps from it. (C + 1.5 = D#, C# + 1.5 = E, Bb + 1.5 = C#, etc.) Once we have determined which sounding note is exactly 1.5 steps above our starting note, we then need to reconcile this note with the name we found in the previous step. This means that we must use "b" and "#" signs to make the note name we arrived in at step 1 SOUND like the note we arrived in at step two. Remember, 2 notes can sound the same but have different names (for example F# sounds like Gb). Also remember that there is a half step between B to C, and between E to F. </p>
-        <p>Here is a complete example of this process: original scale is G minor. Going up 2 note names brings us to B. We go up a step and a half from G to get A#/Bb. Looking at those two options, since we know the note name needs to be B, we choose Bb as the final note, meaning that the parralel major to G minor is Bb major.</p>
-        <h3>Found your parralel major? AWESOME! Click the button when you are ready.</h3>
+        <p>Next, we need to determine if the new note name (the one that is 2 above the original) has and "b" or "#" signs. To do that, we look at the 2nd part of finding a relative major: the 1.5 steps. Once we know the relative major's name, we need to account for the distance: we go back to the original, minor scale name (this time including any "b" or "#"), and we go up 1.5 steps from it. (C + 1.5 = D#, C# + 1.5 = E, Bb + 1.5 = C#, etc.) Once we have determined which sounding note is exactly 1.5 steps above our starting note, we then need to reconcile this note with the name we found in the previous step. This means that we must use "b" and "#" signs to make the note name we arrived in at step 1 SOUND like the note we arrived in at step two. Remember, 2 notes can sound the same but have different names (for example F# sounds like Gb). Also remember that there is a half step between B to C, and between E to F. </p>
+        <p>Here is a complete example of this process: original scale is G minor. Going up 2 note names brings us to B. We go up a step and a half from G to get A#/Bb. Looking at those two options, since we know the note name needs to be B, we choose Bb as the final note, meaning that the relative major to G minor is Bb major.</p>
+        <h3>Found your relative major? AWESOME! Click the button when you are ready.</h3>
         <button onClick={major}>FOUND IT!</button>
         <button onClick={log}>current state</button>       
         </>

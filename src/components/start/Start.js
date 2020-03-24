@@ -8,13 +8,7 @@ function Start() {
         <h2>Hello and Welcome!</h2>
         <p>This application will help you learn and practice the steps to determining the key signature of every scale! To begin, please choose if you would like to learn the process, or test your knowledge.</p>
         <Button className="btn" ><Link to="/learn">Learn</Link></Button>
-        <Button className="btn">Play</Button>
-   
-        
-        
-        
-        {/* <Button><Link className="btn" to="/play">Test</Link></Button> */}
-
+        <Button className="btn"><Link to="/play">Play</Link></Button>
         </>
     )
 
