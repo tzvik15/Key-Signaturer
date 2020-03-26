@@ -1,9 +1,11 @@
 .head{
     font-family: 'Gotu', sans-serif;
+    text-align: center;
 }
 
 .ansBut{
-      
+      margin-left: 10px;
+      margin-right: 10px;
         font-size: 36px;
         font-family: 'Gotu', sans-serif;
         background-color: gray;
@@ -12,6 +14,12 @@
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         font-weight: bold;
-        
-        
+        box-shadow: 5px  rgb(161, 34, 161);
+        text-align: center;
+}
+
+.text{
+    font-family: 'Source Code Pro', monospace;
+    font-size: 17px;
+    text-align: center;
 }

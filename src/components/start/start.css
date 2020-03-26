@@ -1,4 +1,13 @@
-
+body{
+    text-align: center;
+    background-image: url('/assets/image/start3.gif');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    /* min-width: 100%;
+    min-height: 100%; */
+    text-align: center;
+  }
 
 .hAndW{
     padding-left: 406px;
@@ -20,7 +29,7 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: bold;
-    ox-shadow: 5px 10px rgb(161, 34, 161);
+    box-shadow: 5px  rgb(161, 34, 161);
     
 }
 
@@ -28,6 +37,7 @@
     font-size: 36px;
     font-family: 'Gotu', sans-serif; 
     margin-left: 30px;
+    background-color: gray;
 }
 
 .p{
@@ -36,4 +46,5 @@
     text-align: center;
     padding-left: 215px;
     padding-right: 200px;
+    color: whitesmoke;
 }
