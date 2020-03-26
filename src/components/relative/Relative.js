@@ -1,9 +1,15 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
+import {Link} from "react-router-dom";
 
 function Relative() {
 
     const scales = ["C Major", "A Minor", "F Major", "D Minor", "Bb Major", "G Minor", "Eb Major", "C Minor", "Ab Major", "F Minor", "Db Major", "Bb Minor", "Gb Major", "Eb Minor", "Cb Major", "Ab Minor", "G Major", "E Minor", "D Major", "B Minor", "A Major", "F# Minor", "E Major", "C# Minor", "B Major", "G# Minor", "F# Major", "D# Minor", "C# Major", "A# Minor"]
 
+    const [count, setCount] = useState({
+        yes:0,
+        no:0
+    })
+    
     const [rand, setRand] = useState("");
 
     const [correct, setCorrect] = useState("");
@@ -12,27 +18,33 @@ function Relative() {
         start:false
     })
 
+    const coAn=()=> {
+        setCount({...count, yes:count.yes+1})
+    }
+
+    const inCoAn=()=> {
+        setCount({...count, no:count.no+1})
+    }
+
     const start=()=> {
         setPlay({start:true})
         random();
-        answer();
     }
 
+    useEffect(() => {
+        
+        answer();
+      }, [rand]);
+
     const selected=(event)=> {
-        console.log(typeof(event.target.innerText))
-        console.log(correct)
         if (event.target.innerText === correct) {
-            console.log("YES!");
-            random();
-        } else console.log("no");
-        random();
+          coAn();  random();
+        } else inCoAn(); random();
     }
 
     const random=()=>{
-
        let rand1 = scales[Math.floor(Math.random() * scales.length)];
-       setRand(rand1);
-        answer(); 
+       setRand(rand1); 
     }
 
     const test=()=> {
@@ -133,8 +145,6 @@ function Relative() {
         
         :
         console.log("here")
-        
-
     }
 
 
@@ -150,12 +160,15 @@ function Relative() {
         <p>What is the relative scale of the following scale?</p>
         
         <h3>{rand}</h3>
-        <button onClick={test}>test</button>
         {scales.sort().map((item) => (
             <button onClick={selected}>{item }</button>
-
-
         ))}
+
+        <div>
+            <h1>Correct Answers: {count.yes}</h1>
+            <h1>Incorrect Answers: {count.no}</h1>
+        </div>
+        <button ><Link to="/">HOME</Link></button>
         </>
     )
 }

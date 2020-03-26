@@ -8,6 +8,7 @@ import Play from './components/play/Play';
 function App() {
 	return (
 		<Router>
+			<Route exact path ="/Key-Signaturer" component={Start} />
 			<Route exact path="/" component={Start} />
 			<Route exact path="/learn" component={Learn} />
 			<Route exact path="/play" component={Play} />
