@@ -1,6 +1,6 @@
 body{
     text-align: center;
-    background-image: url('/assets/image/start3.gif');
+    background-image: url('/assets/image/start4.gif');
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -10,21 +10,21 @@ body{
   }
 
 .hAndW{
-    padding-left: 406px;
+    padding-left:100px;
     font-size: 59px;
     font-family: 'Gotu', sans-serif;
-    background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);    
+    background-image: linear-gradient(to left, violet, indigo, blue, green, rgb(202, 160, 22), orange, red);    
     color: transparent;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 .btn{
-    margin-left: 480px;
+    margin-left: 100px;
     font-size: 36px;
     font-family: 'Gotu', sans-serif;
-    background-color: gray;
-    background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);    
+    background-color: #555555;
+    background-image: linear-gradient(to left, violet, indigo, blue, green, rgb(243, 224, 55), orange, red);    
     color: transparent;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -37,7 +37,7 @@ body{
     font-size: 36px;
     font-family: 'Gotu', sans-serif; 
     margin-left: 30px;
-    background-color: gray;
+    background-color: #555555;
 }
 
 .p{
@@ -46,5 +46,5 @@ body{
     text-align: center;
     padding-left: 215px;
     padding-right: 200px;
-    color: whitesmoke;
+    
 }
