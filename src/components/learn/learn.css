@@ -1,0 +1,17 @@
+.head{
+    font-family: 'Gotu', sans-serif;
+}
+
+.ansBut{
+      
+        font-size: 36px;
+        font-family: 'Gotu', sans-serif;
+        background-color: gray;
+        background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);    
+        color: transparent;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-weight: bold;
+        
+        
+}
