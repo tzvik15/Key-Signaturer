@@ -1,10 +1,4 @@
-/* .body{
-    background-image: url(../start/start.jpg);
-    background-size: cover;
-    background-attachment: fixed;
-    min-width: 100%;
-    min-height: 100%;
-  } */
+
 
 .hAndW{
     padding-left: 406px;
@@ -26,6 +20,7 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: bold;
+    ox-shadow: 5px 10px rgb(161, 34, 161);
     
 }
 
