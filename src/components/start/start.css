@@ -1,10 +1,11 @@
 body{
     text-align: center;
-    background-image: url('../../assets/start4.gif');
+    background-image: url('../../assets/start3.gif');
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    background-size: 1200px 620px;
+    /* background-size: inherit; */
+    background-size: 1600px 770px;
     /* min-width: 100%;
     min-height: 100%; */
     text-align: center;
