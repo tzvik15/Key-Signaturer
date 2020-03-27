@@ -1,0 +1,28 @@
+.head{
+    font-family: 'Gotu', sans-serif;
+    text-align: center;
+    color: whitesmoke;
+}
+
+.ansBut1{
+      margin-left: 10px;
+      margin-right: 10px;
+        font-size: 15px;
+        font-family: 'Gotu', sans-serif;
+        border: 3px solid whitesmoke;
+        background-image: linear-gradient(to left, violet, rgb(118, 25, 184), rgb(107, 147, 221), green, yellow, orange, red);    
+        color: transparent;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-weight: bold;
+       
+        text-align: center;
+        border-radius: 12px;
+}
+
+.text{
+    font-family: 'Source Code Pro', monospace;
+    font-size: 17px;
+    text-align: center;
+    color: whitesmoke;
+}

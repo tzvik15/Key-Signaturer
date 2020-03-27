@@ -4,6 +4,7 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
+    background-size: 1200px 620px;
     /* min-width: 100%;
     min-height: 100%; */
     text-align: center;
@@ -24,13 +25,15 @@ body{
     font-size: 36px;
     font-family: 'Gotu', sans-serif;
     background-color: #555555;
-    background-image: linear-gradient(to left, violet, indigo, blue, green, rgb(243, 224, 55), orange, red);    
+    background-image: linear-gradient(to left, violet, indigo, rgb(38, 110, 192), green, rgb(243, 224, 55), orange, red);    
     color: transparent;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: bold;
-    box-shadow: 5px  rgb(161, 34, 161);
-    
+    box-shadow: 10px whitesmoke;
+    border-radius: 12px;
+    border: 5px solid whitesmoke;
+    border-radius: 12px;
 }
 
 .btnP{
@@ -46,5 +49,5 @@ body{
     text-align: center;
     padding-left: 215px;
     padding-right: 200px;
-    
+    color: whitesmoke;
 }
