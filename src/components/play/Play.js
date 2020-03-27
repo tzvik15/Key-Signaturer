@@ -4,6 +4,7 @@ import Relative from "../relative/Relative"
 import Sharps from "../sharps/Sharps"
 import Flats from "../flats/Flats"
 import Quiz from "../quiz/Quiz"
+import "../play/play.css"
 
 function Play() {
 
@@ -42,11 +43,11 @@ function Play() {
     return (
         choiceState.choice===false?
         <>
-        <p>Welcome to the play section of this app! Here you will have the opportunity to test your abilities and the things you have learned! You can practice specific topics, or try the "quiz yourself" section that includes all kinds of questions!</p>
-        <button onClick={relative}>Relative Keys</button>
-        <button onClick={sharps}>Sharp Keys</button>
-        <button onClick={flats}>Flat Keys</button>
-        <button onClick={quiz}>Quiz Yourself!</button>
+        <p className ="head">Welcome to the play section of this app! Here you will have the opportunity to test your abilities and the things you have learned! You can practice specific topics, or try the "quiz yourself" section that includes all kinds of questions!</p>
+        <button  className= "ansBut" onClick={relative}>Relative Keys</button>
+        <button className= "ansBut" onClick={sharps}>Sharp Keys</button>
+        <button className= "ansBut" onClick={flats}>Flat Keys</button>
+        <button className= "ansBut" onClick={quiz}>Quiz Yourself!</button>
         </>
         :
         choiceState.choice===true && choiceState.rk===true?
@@ -63,7 +64,7 @@ function Play() {
         :
         <>
         <p>Click the button to return to the main menu.</p>
-        <button onClick={reset}><Link to="/">HOME</Link></button>
+        <button className= "ansBut" onClick={reset}><Link to="/">HOME</Link></button>
         </>
     )
 }

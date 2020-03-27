@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from "react";
 import {Link} from "react-router-dom";
+import "../relative/relative.css"
 
 function Relative() {
 
@@ -152,23 +153,23 @@ function Relative() {
 
         play.start===false?
         <>
-        <p>In this section you will be given a random scale name, and you will need to select the relative minor/major</p>
-        <button onClick={start}>READY!</button>
+        <p className ="head">In this section you will be given a random scale name, and you will need to select the relative minor/major</p>
+        <button className= "ansBut" onClick={start}>READY!</button>
         </>
         :
         <>
-        <p>What is the relative scale of the following scale?</p>
+        <p className ="text">What is the relative scale of the following scale?</p>
         
-        <h3>{rand}</h3>
+        <h3 className ="head">{rand}</h3>
         {scales.sort().map((item) => (
-            <button onClick={selected}>{item }</button>
+            <button  className= "ansBut1" onClick={selected}>{item }</button>
         ))}
 
         <div>
-            <h1>Correct Answers: {count.yes}</h1>
-            <h1>Incorrect Answers: {count.no}</h1>
+            <h1 className ="text">Correct Answers: {count.yes}</h1>
+            <h1 className ="text">Incorrect Answers: {count.no}</h1>
         </div>
-        <button ><Link to="/">HOME</Link></button>
+        <button  className= "ansBut" ><Link to="/">HOME</Link></button>
         </>
     )
 }
