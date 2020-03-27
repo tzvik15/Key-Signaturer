@@ -1,6 +1,6 @@
 body{
     text-align: center;
-    background-image: url('/assets/image/start4.gif');
+    background-image: url('../../assets/start4.gif');
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;

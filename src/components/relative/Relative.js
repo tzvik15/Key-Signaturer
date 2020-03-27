@@ -47,9 +47,6 @@ function Relative() {
        setRand(rand1); 
     }
 
-    const test=()=> {
-        console.log(correct)
-    }
 
     const answer=()=>{
 
