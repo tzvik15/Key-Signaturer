@@ -166,7 +166,7 @@ function Relative() {
             <h1 className ="text">Correct Answers: {count.yes}</h1>
             <h1 className ="text">Incorrect Answers: {count.no}</h1>
         </div>
-        <button  className= "ansBut" ><Link to="/">HOME</Link></button>
+        <button  className= "home" ><Link to="/">HOME</Link></button>
         </>
     )
 }
