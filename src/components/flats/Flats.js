@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import {Link} from "react-router-dom";
+import "../flats/flats.css"
 
 function Flats() {
   const scales = [
@@ -121,31 +122,31 @@ function Flats() {
 
   return play.start === false ? (
     <>
-      <p>
+      <p className ="head">
         In this section you will be presented with a name of a scale, and you
         have to pick how many flats it has.
       </p>
-      <button onClick={start}>READY!</button>
+      <button className= "ansBut" onClick={start}>READY!</button>
     </>
   ) : (
     <>
-      <p>How many flats does the following scale have?</p>
-      <h3>{rand}</h3>
-      <button onClick={selected}>0</button>
-      <button onClick={selected}>1</button>
-      <button onClick={selected}>2</button>
-      <button onClick={selected}>3</button>
-      <button onClick={selected}>4</button>
-      <button onClick={selected}>5</button>
-      <button onClick={selected}>6</button>
-      <button onClick={selected}>7</button>
+      <p className ="text" >How many flats does the following scale have?</p>
+      <h3 className ="head">{rand}</h3>
+      <button className= "ansBut2" onClick={selected}>0</button>
+      <button  className= "ansBut2" onClick={selected}>1</button>
+      <button className= "ansBut2" onClick={selected}>2</button>
+      <button className= "ansBut2" onClick={selected}>3</button>
+      <button className= "ansBut2" onClick={selected}>4</button>
+      <button  className= "ansBut2" onClick={selected}>5</button>
+      <button className= "ansBut2" onClick={selected}>6</button>
+      <button className= "ansBut2" onClick={selected}>7</button>
 
       <div>
-        <h1>Correct Answers: {count.yes}</h1>
-        <h1>Incorrect Answers: {count.no}</h1>
+        <h1 className ="text" >Correct Answers: {count.yes}</h1>
+        <h1 className ="text">Incorrect Answers: {count.no}</h1>
       </div>
-      <button>
-        <Link to="/">HOME</Link>
+      <button className= "home">
+        <Link  to="/">HOME</Link>
       </button>
     </>
   );

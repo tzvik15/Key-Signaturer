@@ -22,10 +22,9 @@ body{
 }
 
 .btn{
-    margin-left: 100px;
+    margin-left: 45px;
     font-size: 36px;
     font-family: 'Gotu', sans-serif;
-    background-color: #555555;
     background-image: linear-gradient(to left, violet, indigo, rgb(38, 110, 192), green, rgb(243, 224, 55), orange, red);    
     color: transparent;
     -webkit-background-clip: text;
@@ -41,7 +40,6 @@ body{
     font-size: 36px;
     font-family: 'Gotu', sans-serif; 
     margin-left: 30px;
-    background-color: #555555;
 }
 
 .p{
