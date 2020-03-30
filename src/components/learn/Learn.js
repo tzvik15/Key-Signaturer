@@ -69,7 +69,6 @@ function log() {
         <h3 className ="head">This step by step guide will help you find the key signature to any scale by following a simple, step-by-step series of questions, with minimal need for memorization!</h3>
         <h2 className ="head">Question 1</h2>
         <p className ="text">Is it a Major key or Minor key?</p>
-        <button className= "ansBut" onClick={log}>current state</button>
         <button className= "ansBut" onClick={major}>Major</button>
         <button className= "ansBut" onClick={minor}>Minor</button>
         </>
@@ -94,7 +93,6 @@ function log() {
         <p className ="head">Now we are ready to ask the final question: does the name of the scale have the word "flat" (or the symbol "b") in it? Examples that have it are Bb, Ab, Db. Examples that don't are F#, G#, A, B.</p>
         <button className= "ansBut" onClick={flat}>Yes it does!</button>
         <button className= "ansBut" onClick={sharp}>No it doesn't!</button>
-        <button className= "ansBut" onClick={log}>current state</button>
         </>
         :
         state.q1===true && state.q2===true && state.q3===true && state.hasFlat===true?
@@ -122,8 +120,7 @@ function log() {
         <p className ="text">Next, we need to determine if the new note name (the one that is 2 above the original) has and "b" or "#" signs. To do that, we look at the 2nd part of finding a relative major: the 1.5 steps. Once we know the relative major's name, we need to account for the distance: we go back to the original, minor scale name (this time including any "b" or "#"), and we go up 1.5 steps from it. (C + 1.5 = D#, C# + 1.5 = E, Bb + 1.5 = C#, etc.) Once we have determined which sounding note is exactly 1.5 steps above our starting note, we then need to reconcile this note with the name we found in the previous step. This means that we must use "b" and "#" signs to make the note name we arrived in at step 1 SOUND like the note we arrived in at step two. Remember, 2 notes can sound the same but have different names (for example F# sounds like Gb). Also remember that there is a half step between B to C, and between E to F. </p>
         <p className ="text">Here is a complete example of this process: original scale is G minor. Going up 2 note names brings us to B. We go up a step and a half from G to get A#/Bb. Looking at those two options, since we know the note name needs to be B, we choose Bb as the final note, meaning that the relative major to G minor is Bb major.</p>
         <h3 className ="head">Found your relative major? AWESOME! Click the button when you are ready.</h3>
-        <button className= "ansBut" onClick={major}>FOUND IT!</button>
-        <button className= "ansBut" onClick={log}>current state</button>       
+        <button className= "ansBut" onClick={major}>FOUND IT!</button>      
         </>
          :
          

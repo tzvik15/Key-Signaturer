@@ -1,19 +1,5 @@
 import React, { useState, useEffect } from "react";
-import none from "../../assets/0.jpg";
-import oneF from "../../assets/1f.jpg";
-import twoF from "../../assets/2f.jpg";
-import threeF from "../../assets/3f.jpg";
-import fourF from "../../assets/4f.jpg";
-import fiveF from "../../assets/5f.jpg";
-import sixF from "../../assets/6f.jpg";
-import sevenF from "../../assets/7f.jpg";
-import oneS from "../../assets/1s.jpg";
-import twoS from "../../assets/2s.jpg";
-import threeS from "../../assets/3s.jpg";
-import fourS from "../../assets/4s.jpg";
-import fiveS from "../../assets/5s.jpg";
-import sixS from "../../assets/6s.jpg";
-import sevenS from "../../assets/7s.jpg";
+import {Link} from "react-router-dom";
 
 import "./quiz.css";
 
@@ -25,6 +11,15 @@ function Quiz() {
   const [timer, setTimer] = useState({
     num: 30
   });
+
+  const [count, setCount] = useState({
+    yes: 0,
+    no: 0
+  });
+
+  const [rand, setRand] = useState("");
+
+  const [correct, setCorrect] = useState("");
 
   const scales = [
     "C Major",
@@ -69,10 +64,133 @@ function Quiz() {
     }, 1000);
   }, [timer.num]);
 
+  useEffect(() => {
+    answer();
+  }, [rand]);
+
   const start = () => {
     setPlay({ start: true });
     time();
-    // random();
+    random();
+  };
+
+  const random = () => {
+    let rand1 = scales[Math.floor(Math.random() * scales.length)];
+    setRand(rand1);
+  };
+
+  const coAn = () => {
+    setCount({ ...count, yes: count.yes + 1 });
+  };
+
+  const inCoAn = () => {
+    setCount({ ...count, no: count.no + 1 });
+  };
+
+  const selected = event => {
+        // console.log(event.target.attributes[0].value)
+    if ((event.target.attributes[0].value) === correct) {
+      coAn();
+      random();
+    } else inCoAn();
+    random();
+  };
+
+  const answer = () => {
+    switch (rand) {
+      case "C Major":
+        setCorrect("btn0");
+        break;
+      case "F Major":
+        setCorrect("btn1f");
+        break;
+      case "Bb Major":
+        setCorrect("btn2f");
+        break;
+      case "Eb Major":
+        setCorrect("btn3f");
+        break;
+      case "Ab Major":
+        setCorrect("btn4f");
+        break;
+      case "Db Major":
+        setCorrect("btn5f");
+        break;
+      case "Gb Major":
+        setCorrect("btn6f");
+        break;
+      case "Cb Major":
+        setCorrect("btn7f");
+        break;
+      case "A Minor":
+        setCorrect("btn0");
+        break;
+      case "D Minor":
+        setCorrect("btn1f");
+        break;
+      case "G Minor":
+        setCorrect("btn2f");
+        break;
+      case "C Minor":
+        setCorrect("btn3f");
+        break;
+      case "F Minor":
+        setCorrect("btn4f");
+        break;
+      case "Bb Minor":
+        setCorrect("btn5f");
+        break;
+      case "Eb Minor":
+        setCorrect("btn6f");
+        break;
+      case "Ab Minor":
+        setCorrect("btn7f");
+        break;
+        case "G Major":
+        setCorrect("btn1s");
+        break;
+      case "D Major":
+        setCorrect("btn2s");
+        break;
+      case "A Major":
+        setCorrect("btn3s");
+        break;
+      case "E Major":
+        setCorrect("btn4s");
+        break;
+      case "B Major":
+        setCorrect("btn5s");
+        break;
+      case "F# Major":
+        setCorrect("btn6s");
+        break;
+      case "C# Major":
+        setCorrect("btn7s");
+        break;
+      case "E Minor":
+        setCorrect("btn1s");
+        break;
+      case "B Minor":
+        setCorrect("btn2s");
+        break;
+      case "F# Minor":
+        setCorrect("btn3s");
+        break;
+      case "C# Minor":
+        setCorrect("btn4s");
+        break;
+      case "G# Minor":
+        setCorrect("btn5s");
+        break;
+      case "D# Minor":
+        setCorrect("btn6s");
+        break;
+      case "A# Minor":
+        setCorrect("btn7s");
+        break;
+      default:
+        break;
+    }
   };
 
   return play.start === false ? (
@@ -91,26 +209,38 @@ function Quiz() {
         <h2>Time Left: {timer.num} seconds</h2>
       </div>
       <div>
-        <button id="btn0"></button>
-        <button id="btn1s"></button>
-        <button id="btn2s"></button>
-        <button id="btn3s"></button>
-        <button id="btn4s"></button>
-        <button id="btn5s"></button>
-        <button id="btn6s"></button>
-        <button id="btn7s"></button>
-        <button id="btn1f"></button>
-        <button id="btn2f"></button>
-        <button id="btn3f"></button>
-        <button id="btn4f"></button>
-        <button id="btn5f"></button>
-        <button id="btn6f"></button>
-        <button id="btn7f"></button>
+      <p className ="text">What is the key signature of the following scale?</p>
+      <h3 className ="head">{rand}</h3>
+        <button id="btn0" onClick={selected}></button>
+        <button id="btn1s" onClick={selected}></button>
+        <button id="btn2s" onClick={selected}></button>
+        <button id="btn3s" onClick={selected}></button>
+        <button id="btn4s" onClick={selected}></button>
+        <button id="btn5s" onClick={selected}></button>
+        <button id="btn6s" onClick={selected}></button>
+        <button id="btn7s" onClick={selected}></button>
+        <button id="btn1f" onClick={selected}></button>
+        <button id="btn2f" onClick={selected}></button>
+        <button id="btn3f" onClick={selected}></button>
+        <button id="btn4f" onClick={selected}></button>
+        <button id="btn5f" onClick={selected}></button>
+        <button id="btn6f" onClick={selected}></button>
+        <button id="btn7f" onClick={selected}></button>
       </div>
+      <button className= "home">
+        <Link to="/">HOME</Link>
+      </button>
     </>
   ) : (
     <>
       <h2>TIME'S UP!</h2>
+      <div>
+        <h1 className ="text">Correct Answers: {count.yes}</h1>
+        <h1 className ="text">Incorrect Answers: {count.no}</h1>
+      </div>
+      <button className= "home">
+        <Link to="/">HOME</Link>
+      </button>
     </>
   );
 }
