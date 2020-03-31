@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import "./quiz.css";
 
@@ -88,8 +88,8 @@ function Quiz() {
   };
 
   const selected = event => {
-        // console.log(event.target.attributes[0].value)
-    if ((event.target.attributes[0].value) === correct) {
+    // console.log(event.target.attributes[0].value)
+    if (event.target.attributes[0].value === correct) {
       coAn();
       random();
     } else inCoAn();
@@ -146,7 +146,7 @@ function Quiz() {
       case "Ab Minor":
         setCorrect("btn7f");
         break;
-        case "G Major":
+      case "G Major":
         setCorrect("btn1s");
         break;
       case "D Major":
@@ -209,8 +209,10 @@ function Quiz() {
         <h2>Time Left: {timer.num} seconds</h2>
       </div>
       <div>
-      <p className ="text">What is the key signature of the following scale?</p>
-      <h3 className ="head">{rand}</h3>
+        <p className="text">
+          What is the key signature of the following scale?
+        </p>
+        <h3 className="head">{rand}</h3>
         <button id="btn0" onClick={selected}></button>
         <button id="btn1s" onClick={selected}></button>
         <button id="btn2s" onClick={selected}></button>
@@ -227,7 +229,7 @@ function Quiz() {
         <button id="btn6f" onClick={selected}></button>
         <button id="btn7f" onClick={selected}></button>
       </div>
-      <button className= "home">
+      <button className="home">
         <Link to="/">HOME</Link>
       </button>
     </>
@@ -235,10 +237,10 @@ function Quiz() {
     <>
       <h2>TIME'S UP!</h2>
       <div>
-        <h1 className ="text">Correct Answers: {count.yes}</h1>
-        <h1 className ="text">Incorrect Answers: {count.no}</h1>
+        <h1 className="text">Correct Answers: {count.yes}</h1>
+        <h1 className="text">Incorrect Answers: {count.no}</h1>
       </div>
-      <button className= "home">
+      <button className="home">
         <Link to="/">HOME</Link>
       </button>
     </>
