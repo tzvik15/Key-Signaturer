@@ -29,9 +29,10 @@
 }
 
 .home{
+    margin-top: 10px;
     font-size: 36px;
     font-family: 'Gotu', sans-serif;
-    background-image: linear-gradient(to left, violet, indigo, rgb(38, 110, 192), green, rgb(243, 224, 55), orange, red);    
+    background-image: linear-gradient(to left, rgb(241, 28, 241), rgb(197, 39, 245), rgb(95, 209, 230), rgb(11, 184, 11), yellow, orange, red);   
     color: transparent;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;

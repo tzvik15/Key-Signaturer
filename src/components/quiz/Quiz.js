@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import {Link} from "react-router-dom";
-
 import "./quiz.css";
 
 function Quiz() {
@@ -195,18 +194,18 @@ function Quiz() {
 
   return play.start === false ? (
     <>
-      <p>
+      <p className ="head">
         In this section you will be presented with a name of a scale, and you
         have to pick its key signature. You will have 30 seconds to correctly
         name as many scales as you can! When you are ready to start the clock,
         click the button!
       </p>
-      <button onClick={start}>READY!</button>
+      <button className= "ready" onClick={start}>READY!</button>
     </>
   ) : play.start === true && timer.num > 0 ? (
     <>
       <div>
-        <h2>Time Left: {timer.num} seconds</h2>
+        <h2 className ="head">Time Left: {timer.num} seconds</h2>
       </div>
       <div>
       <p className ="text">What is the key signature of the following scale?</p>
@@ -233,7 +232,7 @@ function Quiz() {
     </>
   ) : (
     <>
-      <h2>TIME'S UP!</h2>
+      <h2 className ="head" >TIME'S UP!</h2>
       <div>
         <h1 className ="text">Correct Answers: {count.yes}</h1>
         <h1 className ="text">Incorrect Answers: {count.no}</h1>

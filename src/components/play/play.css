@@ -4,7 +4,7 @@
       font-size: 36px;
       font-family: 'Gotu', sans-serif;
       border: 5px solid whitesmoke;
-      background-image: linear-gradient(to left, violet, indigo, rgb(89, 156, 233), green, yellow, orange, red);    
+      background-image: linear-gradient(to left, rgb(241, 28, 241), rgb(197, 39, 245), rgb(95, 209, 230), rgb(11, 184, 11), yellow, orange, red);  
       color: transparent;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
